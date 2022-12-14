@@ -1,12 +1,10 @@
 /** ****************************************************************************************
 * \mainpage <nome del progetto>
 *
-* @brief Scrivere un programma che visualizzi tutte le coppie ordinate di numeri naturali la cui somma è 15. 
+* @brief Scrivere un programma che visualizzi tutte le coppie ordinate di numeri naturali la cui somma ï¿½ 15. 
 * 
-*
-*
 * <specifiche del progetto>
-* Scrivere un programma che visualizzi tutte le coppie ordinate di numeri naturali la cui somma è 15. 
+* Scrivere un programma che visualizzi tutte le coppie ordinate di numeri naturali la cui somma ï¿½ 15. 
 * 
 * @author lorenzo zanirato, 3H
 * @date 04/12/2022
