@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <unistd.h>
+int main()
+{
+	char a;
+	int i;
+	int pid;
+	
+	printf("inserisci \nv per il colore verde\ng per il colore giallo\nr per il colore rosso\nq per chiudere");
+	scanf("%c",&a);
+	printf("%c",a);
+	
+	pid = fork();
+	
+	if(pid==0)
+	{
+		switch (a)
+		{
+			case'v':
+				for(i=0;i<10;i++)
+				{
+					printf("led verde acceso");
+					usleep(300*1000);
+					printf("led verde spento");
+				}break;
+			case'g':
+				for(i=0;i<10;i++)
+				{
+					printf("led giallo acceso");
+					usleep(300*1000);
+					printf("led giallo spento");
+				}break;
+			case'r':
+				for(i=0;i<10;i++)
+				{
+					printf("led rosso acceso");
+					usleep(300*1000);
+					printf("led rosso spento");
+				}break;
+			case'q':
+				break;
+		}
+	}	
+}
