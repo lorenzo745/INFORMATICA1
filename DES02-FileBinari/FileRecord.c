@@ -68,7 +68,7 @@ int main()
 	r = trova("alunni.dat", "zanirato");
     printf("\nposizione zanirato: %d\n", r);
 
-    r = contaRecord("alunni.dat");
+    r = contaRecord("studenti.dat");
     printf("\nrecord nel file: %d", r);
 }
 
@@ -214,13 +214,15 @@ int trova(char file[], char cognome[])
 
 int contaRecord(char file[])
 {
-	int c=-1;
+	long c=-1;
     FILE * fp = fopen(file, "rb");//lo apro in rb perchè è un file binario
     if(fp!=NULL)
     {
         fseek(fp,0,SEEK_END);//si posiziona a fine file
         c=ftell(fp);//mi salvo quanto sono distante dall'inizio del file
+        printf("Ftell %ld", c);
+        printf("sizeof studente %ld", sizeof(studente));
+        c/=sizeof(studente);//trovo quanti record ci sono nel file
     }
-	c/=sizeof(studente);//trovo quanti record ci sono nel file
     return c;
 }
