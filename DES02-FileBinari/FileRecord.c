@@ -1,3 +1,17 @@
+/** ****************************************************************************************
+* \mainpage <nome del progetto>
+*
+* @brief Scrivere un programma che, richiesto un numero intero, visualizzi tutti i suoi divisori.
+* 
+* <specifiche del progetto>
+* Scrivere un programma che, richiesto un numero intero, visualizzi tutti i suoi divisori.
+* 
+* @author lorenzo zanirato, 3H
+* @date 04/12/2022
+* @version 1.0 <data> <Descrivere le modifiche apportate>
+* @version 1.1 <data> <Descrivere le modifiche apportate>
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
