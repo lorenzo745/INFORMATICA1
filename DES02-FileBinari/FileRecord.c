@@ -53,6 +53,8 @@ int trova(char [], char []);
 //Funzione che restituisce quanti record ci sono nel file.
 int contaRecord(char []);
 
+int modifica (char [],char[]char []);
+
 
 int main()
 {
@@ -70,6 +72,9 @@ int main()
 
     r = contaRecord("studenti.dat");
     printf("\nrecord nel file: %d", r);
+
+    r = modifica("studenti.dat","nazi","zanirato");
+    printf("%d",&c); 
 }
 
 void carica(char file[])
@@ -223,4 +228,22 @@ int contaRecord(char file[])
         c/=sizeof(studente);//trovo quanti record ci sono nel file
     }
     return c;
+}
+
+
+int modifica (char file[],char cog[]char cog2[])
+{
+    int i,c;
+    studente r;
+    FILE *fp=fopen(file,'rb+')
+    fread(&r,sizeof(studente),1,fp);
+    {
+        if (strcmp(r.cognome,cog)==0)
+        strcpy(r.cognome,cog2)
+        {
+            c++;
+            fseek(fp,-sizeof(studente),SEEK_CUR);
+            fwrite(&r,sizeof(studente),1,fp);
+        }
+    }return c;
 }
