@@ -220,8 +220,6 @@ int contaRecord(char file[])
     {
         fseek(fp,0,SEEK_END);//si posiziona a fine file
         c=ftell(fp);//mi salvo quanto sono distante dall'inizio del file
-        printf("Ftell %ld", c);
-        printf("sizeof studente %ld", sizeof(studente));
         c/=sizeof(studente);//trovo quanti record ci sono nel file
     }
     return c;
