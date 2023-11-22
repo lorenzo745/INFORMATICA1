@@ -75,7 +75,8 @@ int main()
 
     r = modifica("studenti.dat","nazi","zanirato");
     printf("%d\n",r); 
-    stampa("studenti.dat");
+
+    
 }
 
 void carica(char file[])
@@ -247,6 +248,7 @@ int modifica (char file[],char cog[],char cog2[])
                 c++;
                 fseek(fp,-sizeof(studente),SEEK_CUR);
                 fwrite(&r,sizeof(studente),1,fp);
+                fseek(fp,0,SEEK_CUR);
             }
         }return c;
     }
