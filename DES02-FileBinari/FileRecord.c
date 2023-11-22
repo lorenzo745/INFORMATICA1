@@ -238,19 +238,19 @@ int modifica (char file[],char cog[],char cog2[])
     int c=0;
     studente r;
     FILE *fp=fopen(file,"rb+");
-    while(!feof(fp))
+    if(fp!=NULL)
     {
-        fread(&r,sizeof(studente),1,fp);
-        {   
+        while(!feof(fp))
+        {
+            fread(&r,sizeof(studente),1,fp);  
             if (strcmp(r.cognome,cog)==0)
-            { 
-                strcpy(r.cognome,cog2);
-                c++;
-                fseek(fp,-sizeof(studente),SEEK_CUR);
-                fwrite(&r,sizeof(studente),1,fp);
-                fseek(fp,0,SEEK_CUR);
-            }
+                { 
+                    strcpy(r.cognome,cog2);
+                    c++;
+                    fseek(fp,-sizeof(studente),SEEK_CUR);
+                    fwrite(&r,sizeof(studente),1,fp);
+                    fseek(fp,0,SEEK_CUR);
+                }
         }return c;
     }
-    
-}
+} 
