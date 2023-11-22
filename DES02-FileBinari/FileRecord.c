@@ -235,7 +235,7 @@ int contaRecord(char file[])
 
 int modifica (char file[],char cog[],char cog2[])
 {
-    int c;
+    int c=0;
     studente r;
     FILE *fp=fopen(file,"rb+");
     while(!feof(fp))
