@@ -60,18 +60,18 @@ int main()
 {
 	int r;
     srand(time(NULL));
-    carica("studenti.dat");
+    //carica("studenti.dat");
     stampa("studenti.dat");
-    r = cercacognome("studenti.dat", "zanirato");
-    printf("\nil cognome zanirato e' stato inserito: %d\n",r);
+    //r = cercacognome("studenti.dat", "zanirato");       //funziona
+    //printf("\nil cognome zanirato e' stato inserito: %d\n",r);
     
-	stampa2("studenti.dat");   
+	//stampa2("studenti.dat");    //funziona
 	
 	r = trova("alunni.dat", "zanirato");
     printf("\nposizione zanirato: %d\n", r);
 
-    r = contaRecord("studenti.dat");
-    printf("\nrecord nel file: %d", r);
+    r = contaRecord("studenti.dat");    //funziona
+    printf("\nrecord nel file: %d\n", r);
 
     r = modifica("studenti.dat","nazi","zanirato");
     printf("%d",r); 
@@ -81,7 +81,7 @@ void carica(char file[])
 {
 	int i,j;
     studente s;
-    FILE * fp = fopen(file, "ab");//lo apro in ab perchè è un file binario
+    FILE * fp = fopen(file, "wb");//lo apro in ab perchè è un file binario
 
     if(fp!=NULL){
         for(i=0;i<C;i++)
@@ -233,17 +233,21 @@ int contaRecord(char file[])
 
 int modifica (char file[],char cog[],char cog2[])
 {
-    int i,c;
+    int c;
     studente r;
     FILE *fp=fopen(file,"rb+");
-    fread(&r,sizeof(studente),1,fp);
+    while(!feof(fp))
     {
-        if (strcmp(r.cognome,cog)==0)
-        { 
-            strcpy(r.cognome,cog2);
-            c++;
-            fseek(fp,-sizeof(studente),SEEK_CUR);
-            fwrite(&r,sizeof(studente),1,fp);
-        }
-    }return c;
+        fread(&r,sizeof(studente),1,fp);
+        {   
+            if (strcmp(r.cognome,cog)==0)
+            { 
+                strcpy(r.cognome,cog2);
+                c++;
+                fseek(fp,-sizeof(studente),SEEK_CUR);
+                fwrite(&r,sizeof(studente),1,fp);
+            }
+        }return c;
+    }
+    
 }
