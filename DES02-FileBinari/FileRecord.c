@@ -67,14 +67,15 @@ int main()
     
 	//stampa2("studenti.dat");    //funziona
 	
-	r = trova("alunni.dat", "zanirato");
-    printf("\nposizione zanirato: %d\n", r);
+	//r = trova("alunni.dat", "zanirato");
+    //printf("\nposizione zanirato: %d\n", r);
 
-    r = contaRecord("studenti.dat");    //funziona
-    printf("\nrecord nel file: %d\n", r);
+    //r = contaRecord("studenti.dat");    //funziona
+    //printf("\nrecord nel file: %d\n", r);
 
     r = modifica("studenti.dat","nazi","zanirato");
-    printf("%d",r); 
+    printf("%d\n",r); 
+    stampa("studenti.dat");
 }
 
 void carica(char file[])
