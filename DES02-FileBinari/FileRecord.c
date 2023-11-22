@@ -219,13 +219,13 @@ int trova(char file[], char cognome[])
 
 int contaRecord(char file[])
 {
-	long c=-1;
+	int c=-1;
     FILE * fp = fopen(file, "rb");//lo apro in rb perchè è un file binario
     if(fp!=NULL)
     {
         fseek(fp,0,SEEK_END);//si posiziona a fine file
-        c=ftell(fp)/sizeof(studente);//mi salvo quanto sono distante dall'inizio del file
-        //c/=;//trovo quanti record ci sono nel file
+        c=ftell(fp)/sizeof(studente);
+        //mi salvo quanto sono distante dall'inizio del file
     }
     return c;
 }
