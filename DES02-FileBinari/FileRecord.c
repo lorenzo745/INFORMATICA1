@@ -60,7 +60,7 @@ int main()
 {
 	int r;
     srand(time(NULL));
-    //carica("studenti.dat");
+    carica("studenti.dat");
     stampa("studenti.dat");
     //r = cercacognome("studenti.dat", "zanirato");       //funziona
     //printf("\nil cognome zanirato e' stato inserito: %d\n",r);
@@ -73,7 +73,7 @@ int main()
     //r = contaRecord("studenti.dat");    //funziona
     //printf("\nrecord nel file: %d\n", r);
 
-    r = modifica("studenti.dat","nazi","zanirato");
+    r = modifica("studenti.dat","zanireito","zanirato");
     printf("%d\n",r); 
     stampa("studenti.dat");
 
