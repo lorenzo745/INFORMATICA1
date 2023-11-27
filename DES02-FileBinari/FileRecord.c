@@ -55,6 +55,8 @@ int contaRecord(char []);
 
 int modifica (char [],char[],char []);
 
+void modifica2(char [],int )
+
 
 int main()
 {
@@ -73,8 +75,13 @@ int main()
     //r = contaRecord("studenti.dat");    //funziona
     //printf("\nrecord nel file: %d\n", r);
 
-    r = modifica("studenti.dat","zanireito","zanirato");
-    printf("volte che il cognome e' stato modificato:%d\n",r); 
+    //r = modifica("studenti.dat","zanireito","zanirato");
+    //printf("volte che il cognome e' stato modificato:%d\n",r); 
+    //stampa("studenti.dat");
+
+    printf("inserire il record da modificare");
+    scanf("%d",&n);
+    modifica2("studenti.dat",n);
     stampa("studenti.dat");
 
     
@@ -256,7 +263,7 @@ int modifica (char file[],char cog[],char cog2[])
     }
 } 
 
-int modifica2(char file[],int n)
+void modifica2(char file[],int n)
 {
     int c;
     studente r;
