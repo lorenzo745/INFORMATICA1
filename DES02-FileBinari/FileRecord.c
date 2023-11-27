@@ -55,15 +55,15 @@ int contaRecord(char []);
 
 int modifica (char [],char[],char []);
 
-void modifica2(char [],int )
+void modifica2(char [],int );
 
 
 int main()
 {
-	int r;
+	int r,n=0;
     srand(time(NULL));
     //carica("studenti.dat");
-    stampa("studenti.dat");
+    //stampa("studenti.dat");
     //r = cercacognome("studenti.dat", "zanirato");       //funziona
     //printf("\nil cognome zanirato e' stato inserito: %d\n",r);
     
@@ -265,7 +265,7 @@ int modifica (char file[],char cog[],char cog2[])
 
 void modifica2(char file[],int n)
 {
-    int c;
+    int c,j;
     studente r;
     FILE *fp=fopen(file,"rb+");
     if(fp!=NULL)
@@ -274,19 +274,19 @@ void modifica2(char file[],int n)
         if(c==0)
         {
             printf("inserisci cognome dello studente: ");
-            scanf("%s",s.cognome);
+            scanf("%s",r.cognome);
             printf("inserisci nome dello studente: ");
-            scanf("%s",s.nome);
+            scanf("%s",r.nome);
 
-            s.nascita.gg = rand()%30+1;
-            s.nascita.mm = rand()%12+1;
-            s.nascita.aa = rand()%30+1990;
+            r.nascita.gg = rand()%30+1;
+            r.nascita.mm = rand()%12+1;
+            r.nascita.aa = rand()%30+1990;
 
             for(j=0;j<V;j++) 
 			{
-                s.voti[j] = rand()%10+1;
+                r.voti[j] = rand()%10+1;
             }
-            fwrite(&s, sizeof(studente),1,fp);//carico i record
+            fwrite(&r, sizeof(studente),1,fp);//carico i record
         }
 
     }
