@@ -255,3 +255,8 @@ int modifica (char file[],char cog[],char cog2[])
         }return c;
     }
 } 
+
+int modifica2(char file[],int n)
+{
+    
+}
