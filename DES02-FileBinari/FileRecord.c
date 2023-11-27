@@ -79,7 +79,7 @@ int main()
     //printf("volte che il cognome e' stato modificato:%d\n",r); 
     //stampa("studenti.dat");
 
-    printf("inserire il record da modificare");
+    printf("inserire il record da modificare\n");
     scanf("%d",&n);
     modifica2("studenti.dat",n);
     stampa("studenti.dat");
