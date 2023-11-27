@@ -62,7 +62,7 @@ int main()
 {
 	int r,n=0;
     srand(time(NULL));
-    //carica("studenti.dat");
+    carica("studenti.dat");
     //stampa("studenti.dat");
     //r = cercacognome("studenti.dat", "zanirato");       //funziona
     //printf("\nil cognome zanirato e' stato inserito: %d\n",r);
@@ -79,10 +79,10 @@ int main()
     //printf("volte che il cognome e' stato modificato:%d\n",r); 
     //stampa("studenti.dat");
 
-    printf("inserire il record da modificare\n");
-    scanf("%d",&n);
-    modifica2("studenti.dat",n);
-    stampa("studenti.dat");
+    //printf("inserire il record da modificare\n");
+    //scanf("%d",&n);
+    //modifica2("studenti.dat",n);
+    //stampa("studenti.dat");
 
     
 }
