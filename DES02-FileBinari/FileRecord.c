@@ -288,6 +288,10 @@ void modifica2(char file[],int n)
             }
             fwrite(&r, sizeof(studente),1,fp);//carico i record
         }
+        else 
+        {
+            printf("record non trovato");
+        }
 
     }
 
