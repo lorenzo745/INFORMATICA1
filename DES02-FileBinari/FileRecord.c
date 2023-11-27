@@ -258,5 +258,30 @@ int modifica (char file[],char cog[],char cog2[])
 
 int modifica2(char file[],int n)
 {
+    int c;
+    studente r;
+    FILE *fp=fopen(file,"rb+");
+    if(fp!=NULL)
+    {
+        c=fseek(fp,n*sizeof(studente),SEEK_SET);
+        if(c==0)
+        {
+            printf("inserisci cognome dello studente: ");
+            scanf("%s",s.cognome);
+            printf("inserisci nome dello studente: ");
+            scanf("%s",s.nome);
+
+            s.nascita.gg = rand()%30+1;
+            s.nascita.mm = rand()%12+1;
+            s.nascita.aa = rand()%30+1990;
+
+            for(j=0;j<V;j++) 
+			{
+                s.voti[j] = rand()%10+1;
+            }
+            fwrite(&s, sizeof(studente),1,fp);//carico i record
+        }
+
+    }
 
 }
