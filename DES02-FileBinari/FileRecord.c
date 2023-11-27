@@ -74,7 +74,7 @@ int main()
     //printf("\nrecord nel file: %d\n", r);
 
     r = modifica("studenti.dat","zanireito","zanirato");
-    printf("%d\n",r); 
+    printf("volte che il cognome e' stato modificato:%d\n",r); 
     stampa("studenti.dat");
 
     
@@ -258,5 +258,5 @@ int modifica (char file[],char cog[],char cog2[])
 
 int modifica2(char file[],int n)
 {
-    
+
 }
