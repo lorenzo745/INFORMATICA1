@@ -273,9 +273,9 @@ void modifica2(char file[],int n)
         c=fseek(fp,n*sizeof(studente),SEEK_SET);
         if(c==0)
         {
-            printf("inserisci cognome dello studente: ");
+            printf("inserisci cognome dello studente: \n");
             scanf("%s",r.cognome);
-            printf("inserisci nome dello studente: ");
+            printf("inserisci nome dello studente: \n ");
             scanf("%s",r.nome);
 
             r.nascita.gg = rand()%30+1;
