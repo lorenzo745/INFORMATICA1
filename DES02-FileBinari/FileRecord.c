@@ -273,6 +273,7 @@ void modifica2(char file[],int n)
         c=fseek(fp,n*sizeof(studente),SEEK_SET);
         if(c==0)
         {
+            printf("record trovato\n");
             printf("inserisci cognome dello studente: \n");
             scanf("%s",r.cognome);
             printf("inserisci nome dello studente: \n ");
@@ -294,5 +295,6 @@ void modifica2(char file[],int n)
         }
 
     }
+    fclose(fp);
 
 }
