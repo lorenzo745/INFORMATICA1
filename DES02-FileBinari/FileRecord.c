@@ -270,8 +270,8 @@ void modifica2(char file[],int n)
     FILE *fp=fopen(file,"rb+");
     if(fp!=NULL)
     {
-        c=fseek(fp,n*sizeof(studente),SEEK_SET);
-        if(c==0)
+        c=contaRecord(file);
+        if(c>n)
         {
             printf("record trovato\n");
             printf("inserisci cognome dello studente: \n");
