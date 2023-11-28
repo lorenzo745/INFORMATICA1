@@ -62,7 +62,7 @@ int main()
 {
 	int r,n=0;
     srand(time(NULL));
-    carica("studenti.dat");
+    //carica("studenti.dat");
     //stampa("studenti.dat");
     //r = cercacognome("studenti.dat", "zanirato");       //funziona
     //printf("\nil cognome zanirato e' stato inserito: %d\n",r);
@@ -287,6 +287,7 @@ void modifica2(char file[],int n)
 			{
                 r.voti[j] = rand()%10+1;
             }
+            fseek(fp,sizeof(studente) * (n-1),SEEK_SET);
             fwrite(&r, sizeof(studente),1,fp);//carico i record
         }
         else 
