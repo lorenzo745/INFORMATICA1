@@ -34,7 +34,7 @@ void test();
 
 int main(){
 	int risposta;                 // variabile per gestione menu
-	int rispostaSottoMenu;        // variabile per gestione sotto menu
+	int rispostaSottoMen;        // variabile per gestione sotto menu
 	
 	do{
 		system("CLS");
