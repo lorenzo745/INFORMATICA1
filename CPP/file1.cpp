@@ -28,11 +28,11 @@ class frazione {
     
     void stampa()
     {
-        cout<< numeratore << "/" << denominatore << end1;
+        cout<< numeratore << "/" << denominatore << endl;
     }
-}
+};
 
-int main 
+int main ()
 {
     Frazione f1;
 
