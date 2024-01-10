@@ -6,7 +6,7 @@ class frazione {
     int denominatore;
 
     public:
-    Frazione() {}; //costuttore
+    Frazione () {}; //costuttore
     void setnumeratore(int n)
     {
         numeratore=n;
