@@ -8,6 +8,8 @@ class Frazione {
         int denominatore;
 
     public:
+
+        int aiuto;
         Frazione () {}; //costuttore
         void setnumeratore(int n)
         {
@@ -55,6 +57,8 @@ class Frazione {
 
 int main ()
 {
+    f1.aiuto=4;
+    cout<<aiuto;
     Frazione f1;
     int n,d;
     cout<<"inserisci prima il numeratore e poi il deniminatore"<<endl;
