@@ -9,9 +9,22 @@ class Frazione {
 
     public:
 
-        int aiuto;
-        Frazione () {}; //costuttore
-        void setnumeratore(int n)
+        //int aiuto;
+        Frazione () {
+            numeratore=1;
+            denominatore=1;
+        }; //costuttore
+
+        Frazione (int x) {
+            numeratore=x;
+            denominatore=1;
+        };
+
+        Frazione (int x, int y) {
+            numeratore=x;
+            denominatore=y;
+        };
+        /*void setnumeratore(int n)
         {
             numeratore=n;
         }
@@ -19,7 +32,7 @@ class Frazione {
         {
             denominatore=d;
         }
-
+        */
         int getnumeratore()
         {
             return numeratore;
@@ -63,12 +76,13 @@ int main ()
     cin>>n;
     cin>>d;
     cout<<"\n"<<endl;
-    f1.setnumeratore(n);
-    f1.setdenominatore(d);
+    //f1.setnumeratore(n);
+    //f1.setdenominatore(d);
+    
     f1.stampa();
 
     f1.semplifica();
     f1.stampa();
 
-    f1.aiuto=4;
+    //f1.aiuto=4;
 }
