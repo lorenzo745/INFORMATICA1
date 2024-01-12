@@ -70,7 +70,4 @@ int main ()
     f1.semplifica();
     f1.stampa();
 
-    f1.aiuto=4;
-    cout<<f1.aiuto;
-
 }
