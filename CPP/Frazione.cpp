@@ -57,8 +57,6 @@ class Frazione {
 
 int main ()
 {
-    f1.aiuto=4;
-    cout<<aiuto;
     Frazione f1;
     int n,d;
     cout<<"inserisci prima il numeratore e poi il deniminatore"<<endl;
@@ -71,5 +69,8 @@ int main ()
 
     f1.semplifica();
     f1.stampa();
+
+    f1.aiuto=4;
+    cout<<f1.aiuto;
 
 }
