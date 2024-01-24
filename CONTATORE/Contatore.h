@@ -1,7 +1,7 @@
-#ifndef RETTANGOLO_H
-#define RETTANGOLO_H
+#ifndef CONTATORE_H
+#define CONTATORE_H
 
-class Rettangolo
+class Contatore
 {
     private:
     
@@ -11,17 +11,17 @@ class Rettangolo
     public:
 
     Contatore();    /*costruttore con zero parametri - Pone valore a zero e passo ad 1 */
-   Contatore(int);    /*costruttore con 1 parametro - Pone valore uguale a parametro e passo ad 1 */
-   Contatore(int, int);    /*costruttore con 2 parametri, Pone valore uguale a parametro e passo ad 1 /*
-   ~Contatore();  /*distruttore*/
-    void setBase(double base);
-    void setAltezza(double altezza);
-    double getBase();
-    double getAltezza();
-    double calcolaPerimetro();
-    double calcolaArea();
-    double calcolaDiagonale();
-    void stampaTutto();
+    Contatore(int valore);    /*costruttore con 1 parametro - Pone valore uguale a parametro e passo ad 1 */
+    Contatore(int valore, int passo);    /*costruttore con 2 parametri, Pone valore uguale a parametro e passo ad 1 /*
+    ~Contatore();  /*distruttore*/
+    int getValore();
+    void setValore(int);
+    int getPasso();
+    void setPasso(int);
+    void reset();    //pone valore a zero
+    void inc();       //incrementa l'attributo valore di tante unità quanto indicato nell'attributo passo
+    void dec();      //decrementa l'attributo valore di tante unità quanto indicato nell'attributo passo
+    void stampa();  //stampa il valore dei due attributi privati
 };
 
 #endif
