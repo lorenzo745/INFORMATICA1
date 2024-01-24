@@ -7,6 +7,10 @@ using namespace std;
         base=1;
         altezza=1;
     }
+    Rettangolo::Rettangolo(double base)
+    {
+        this->base=base;
+    }
     Rettangolo::Rettangolo(double base, double altezza)
     {
         this->base=base;

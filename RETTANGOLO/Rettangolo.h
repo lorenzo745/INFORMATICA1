@@ -11,6 +11,7 @@ class Rettangolo
     public:
 
     Rettangolo();
+    Rettangolo(double base);
     Rettangolo(double base, double altezza);
     void setBase(double base);
     void setAltezza(double altezza);
