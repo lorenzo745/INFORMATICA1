@@ -12,7 +12,7 @@ class Rettangolo
 
     Rettangolo();
     Rettangolo(double base);
-    Rettangolo(double base=5, double altezza=5);
+    Rettangolo(double base, double altezza);
     void setBase(double base);
     void setAltezza(double altezza);
     double getBase();
