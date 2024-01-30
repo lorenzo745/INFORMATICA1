@@ -73,7 +73,7 @@ int main ()
     Frazione f1;
     int n,d;
     cout<<"inserisci prima il numeratore e poi il deniminatore"<<endl;
-    cin>>n;
+    >>n;cin
     cin>>d;
     cout<<"\n"<<endl;
     //f1.setnumeratore(n);

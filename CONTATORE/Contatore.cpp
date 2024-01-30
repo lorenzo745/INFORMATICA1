@@ -55,3 +55,16 @@ using namespace std;
         cout<<"area "<<calcolaArea()<<endl;
         cout<<"diagonale "<<calcolaDiagonale()<<endl;
     }
+
+
+
+
+    int Contatore::media()
+    {
+        int v[N];
+        for(int i=0;i<N;i++)
+        {
+            cout<<"base "<<base<<endl;
+            cin>>v[i];
+        }
+    }
