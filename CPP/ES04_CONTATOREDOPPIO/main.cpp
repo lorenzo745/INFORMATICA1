@@ -1,28 +1,33 @@
 #include <iostream>
 #include "Contatore.h"
+#include "ContatoreDoppio.h"
+
 
 using namespace std;
 
 int main(){
+
+    cout<<"Contatore: "<<endl;
+
     Contatore c;
 
-    c.stampa();
-    c.inc();
-    c.stampa();
-
-    c.setPasso(3);
-
     c.inc();
 
-    c.stampa();
+    c.inc();
 
     c.dec();
 
     c.stampa();
 
-    c.setValore(10);
+    cout<<"ContatoreDoppio: "<<endl;
 
-    c.stampa();
+    ContatoreDoppio c2;
 
-    cout<<"Valore: "<<c.getValore()<<endl<<"Passo: "<<c.getPasso()<<endl;    
+    c2.inc();
+
+    c2.inc();
+
+    c2.dec();
+
+    c2.stampa();
 }

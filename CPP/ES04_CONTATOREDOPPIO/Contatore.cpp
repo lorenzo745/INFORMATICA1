@@ -1,71 +1,41 @@
-#include<iostream>
-#include<math.h>
-using namespace std;
+#include <iostream>
 #include "Contatore.h"
 
-    Contatore::Contatore(){
+using namespace std;
 
-        this->valore=0;
-        this->passo=1;
-    }
-    Contatore::Contatore(int valore){
+Contatore::~Contatore(){
+    cout<<"Hai chiamato il distruttore"<<endl;
+}
 
-        this->valore=valore;
+int Contatore::getValore(){
+    return valore;
+}
 
-    }
-    Contatore::Contatore(int valore,int passo){
+void Contatore::setValore(int valore){
+    this -> valore = valore;
+}
 
-        this->passo=passo;
-    }
+int Contatore::getPasso(){
+    return passo;
+}
 
-    //~Contatore();  /*distruttore*/
+void Contatore::setPasso(int passo){
+    this -> passo = passo;
+}
 
-    void Contatore::setValore(int valore){
+void Contatore::reset(){
+    valore = 0;
+}
 
-        this->valore=valore;
-    }
+void Contatore::inc(){
+    valore += passo;
+}
 
-    int Contatore::getValore(){
+void Contatore::dec(){
+    valore -= passo;
+}
 
-        return valore;
-
-    }
-
-    void Contatore::setPasso(int passo){
-
-        this->passo=passo;
-
-    }
-    int Contatore::getPasso(){
-
-        return passo;
-
-    }
-
-    void Contatore::reset(){
-
-        this->valore=0;
-    }
-
-    void Contatore::inc(){
-
-        for(int i=0;i < passo;i++){
-
-            this->valore+=valore;
-        }
-
-    }
-
-    void Contatore::dec(){
-
-        for(int i=0;i < passo;i--){
-
-            this->valore=valore-1;
-        }
-    }
-
-    void Contatore::stampa(){
-
-        cout<<"il valore e': "<<valore<<endl;
-        cout<<"il passo e': "<<passo<<endl;
-    }
+void Contatore::stampa(){
+    cout<<"valore = "<<valore<<endl;
+    cout<<"passo = "<<passo<<endl;
+}
