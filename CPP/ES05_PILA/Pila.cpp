@@ -20,7 +20,7 @@ Pila::Pila(int size)
 bool Pila::isEmpty()
 {
     if(fine==0)return true;
-    retun false;
+    return false;
 }
 
 bool Pila::isFull()
@@ -61,7 +61,7 @@ int Pila::top(void)
 
 void Pila::stampa(void)
 {
-    if(!isEmpty)
+    if(!isEmpty())
     {
        for(int i=0;i<fine;i++) cout<<vet[i]<<endl;
     }
