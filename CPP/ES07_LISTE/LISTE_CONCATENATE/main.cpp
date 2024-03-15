@@ -7,7 +7,7 @@ int main()
     Lista l1;
 
     l1.push(5);
-    l1.push(5);
+    l1.push(7);
     l1.push(69);
     l1.pop();
     l1.top();
