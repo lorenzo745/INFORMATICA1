@@ -24,10 +24,10 @@ int Lista::top()
 
 
 void Lista::stampa()
-{
+{p=testa;
      do{
         cout<<p->info<<endl;
-        p->next;
+        p=p->next;
     }while(p->next!=NULL);
 }
    
