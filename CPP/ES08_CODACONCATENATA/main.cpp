@@ -9,6 +9,7 @@ int main()
     C1.push(5);
     C1.push(7);
     C1.push(6);
+    C1.pop();
     C1.top();
     C1.stampa();
 }
