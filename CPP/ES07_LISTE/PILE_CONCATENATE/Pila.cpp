@@ -1,8 +1,8 @@
-#include "lista.h"
+#include "pila.h"
 #include<iostream>
 using namespace std;
 
-void Lista::push(int x)
+void Pila::push(int x)
 {
     p=new nodo;
     p->info=x;
@@ -10,20 +10,20 @@ void Lista::push(int x)
     testa=p;
 }
 
-void Lista::pop()
+void Pila::pop()
 {
     p=testa;
     testa=testa->next;
     delete p;
 }
 
-int Lista::top()
+int Pila::top()
 {
     return testa->info;
 }
 
 
-void Lista::stampa()
+void Pila::stampa()
 {p=testa;
      do{
         cout<<p->info<<endl;
