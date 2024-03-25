@@ -34,7 +34,7 @@ bool Coda::pop() {
 
 int Coda::top() {
     if(!isEmpty()) {
-        return vet[fine];
+        return vet[inizio];
     }
     return 0;
 }
