@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <label for="password">Password</label>
+    <input type="password" id="password">
+    <p id="paragrafo">ciao</p>
+</br>
+    <title>Esercizio h</title>
+    <label for="file">File progress:</label>
+    <progress id="file" max="100" value=""></progress>
+    
+    
+</head>
+
+<body>
+    
+
+    <script>
+        const password = document.getElementById("password");
+        const paragrafo = document.getElementById("paragrafo");
+
+        
+        function controllapassword() {
+            paragrafo.innerHTML = "la lunghezza della password è " + password.value.length;
+            
+            
+        }
+    password.addEventListener("keyup", controllapassword);
+        
+    </script>
+</body>
+</html>

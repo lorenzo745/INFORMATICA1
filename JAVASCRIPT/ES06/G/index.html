@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Esercizio g</title>
+</head>
+
+<body>
+    <button id="pulsante">Premi</button>
+    <p id="paragrafo">ciao</p>
+
+    <script>
+
+        const pulsante = document.getElementById('pulsante');
+        const paragrafo = document.getElementById('paragrafo');
+
+        pulsante.addEventListener("click", () => {
+            paragrafo.innerHTML = "hai premuto il pulsante";
+        })
+    </script>
+</body>
+
+</html>
