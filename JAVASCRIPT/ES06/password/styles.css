@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#output {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 20px;
+    width: 0;
+    background-color: red;
+    border-radius: 5px;
+    transition: width 0.3s;
+}
