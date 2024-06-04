@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valutazione della Password</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,73 +14,74 @@
         <div class="progress" id="progress"></div>
     </div>
 
-    <script>function valutaPassword() {
-        const password = document.getElementById('password').value;
-        let score = 0;
-        let feedback = '';
-        let lenght = 8;
-    
-        // Criteri di valutazione della password
-        if (password.length >= lenght) {
-            score += 1;
+    <script>
+        function valutaPassword() {
+            const password = document.getElementById('password').value;
+            let score = 0;
+            let feedback = '';
+            let lenght = 8;
+        
+            // Criteri di valutazione della password
+            if (password.length >= lenght) {
+                score += 1;
+            }
+        
+            if (/[a-z]/.test(password)) {
+                score += 1;
+            }
+        
+            if (/[A-Z]/.test(password)) {
+                score += 1;
+            }
+        
+            if (/[0-9]/.test(password)) {
+                score += 1;
+            }
+        
+            if (/[^a-zA-Z0-9]/.test(password)) {
+                score += 1;
+            }
+        
+            // Feedback sulla password
+            switch(score) {
+                case 0:
+                    feedback = 'Password nulla';
+                    break;
+                case 1:
+                    feedback = 'Password molto debole';
+                    break;
+                case 2:
+                    feedback = 'Password debole';
+                    break;
+                case 3:
+                    feedback = 'Password moderata';
+                    break;
+                case 4:
+                    feedback = 'Password forte';
+                    break;
+                case 5:
+                    feedback = 'Password molto forte';
+                    break;
+            }
+        
+            // Aggiornamento dell'output
+            document.getElementById('output').innerText = feedback;
+        
+            // Aggiornamento della barra di progresso
+            const progressBar = document.getElementById('progress');
+            progressBar.style.width = (score * 20) + '%';
+        
+            // Cambiare colore in base al punteggio
+            if (score <= 2) {
+                progressBar.style.backgroundColor = 'red';
+            } else if (score === 3) {
+                progressBar.style.backgroundColor = 'orange';
+            } else if (score === 4) {
+                progressBar.style.backgroundColor = 'yellow';
+            } else {
+                progressBar.style.backgroundColor = 'green';
+            }
         }
-    
-        if (/[a-z]/.test(password)) {
-            score += 1;
-        }
-    
-        if (/[A-Z]/.test(password)) {
-            score += 1;
-        }
-    
-        if (/[0-9]/.test(password)) {
-            score += 1;
-        }
-    
-        if (/[^a-zA-Z0-9]/.test(password)) {
-            score += 1;
-        }
-    
-        // Feedback sulla password
-        switch(score) {
-            case 0:
-                feedback = 'Password nulla';
-                break;
-            case 1:
-                feedback = 'Password molto debole';
-                break;
-            case 2:
-                feedback = 'Password debole';
-                break;
-            case 3:
-                feedback = 'Password moderata';
-                break;
-            case 4:
-                feedback = 'Password forte';
-                break;
-            case 5:
-                feedback = 'Password molto forte';
-                break;
-        }
-    
-        // Aggiornamento dell'output
-        document.getElementById('output').innerText = feedback;
-    
-        // Aggiornamento della barra di progresso
-        const progressBar = document.getElementById('progress');
-        progressBar.style.width = (score * 20) + '%';
-    
-        // Cambiare colore in base al punteggio
-        if (score <= 2) {
-            progressBar.style.backgroundColor = 'red';
-        } else if (score === 3) {
-            progressBar.style.backgroundColor = 'orange';
-        } else if (score === 4) {
-            progressBar.style.backgroundColor = 'yellow';
-        } else {
-            progressBar.style.backgroundColor = 'green';
-        }
-    }
     </script>
 </body>
 </html>
